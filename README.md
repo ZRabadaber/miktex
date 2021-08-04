@@ -1,5 +1,5 @@
 # miktex
-port miktex/miktex + additional packs for miktex
+port [miktex/miktex](https://hub.docker.com/r/miktex/miktex) + additional packs for miktex
 
 ## Using the image
 ### Volumes
