@@ -27,7 +27,7 @@ docker volume create --name miktex
 
 This volume will be used to mount the the container directory /miktex/.miktex in subsequent runs.
 
-Provided that your main input file is located in the current working directory, you can run pdflatex as follows:
+Provided that your main input file is located in the current working directory, you can run xelatex as follows:
 
 ```
 docker run --rm -ti \
@@ -35,6 +35,6 @@ docker run --rm -ti \
   -v $(pwd):/miktex/work \
   -e MIKTEX_GID=$(id -g) \
   -e MIKTEX_UID=$(id -u) \
-  miktex/miktex \
-  pdflatex main.tex
+  zrabadaber/miktex \
+  xelatex -interaction=nonstopmode -job-name=main main.tex
 ```
